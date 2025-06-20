@@ -1,103 +1,87 @@
 <!DOCTYPE html><html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ひのまる記憶サポート</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ひのまる記帳サポート</title>
   <style>
     body {
       margin: 0;
-      background: linear-gradient(to bottom, #020617, #0f172a);
-      color: #fff;
-      font-family: "Yu Gothic", sans-serif;
-      overflow-x: hidden;
-    }
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 2rem;
-    }
-    .hero img {
-      width: 200px;
-      animation: floatIn 2s ease-out forwards;
-    }
-    @keyframes floatIn {
-      0% { transform: translateY(50px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-    .speech {
-      margin-top: 1rem;
-      padding: 1rem 2rem;
-      background: #1e293b;
-      border-radius: 1rem;
-      font-size: 1rem;
-      color: #e2e8f0;
-      max-width: 90%;
-      animation: fadeIn 2.5s ease-out forwards;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-    .button {
-      margin-top: 2rem;
-      padding: 0.8rem 1.5rem;
-      background: #38bdf8;
-      border: none;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-      color: #000;
-      cursor: pointer;
-    }
-    .section {
-      padding: 3rem 1.5rem;
-      background: #0f172a;
-      text-align: center;
-    }
-    .section h2 {
-      font-size: 1.5rem;
-      color: #38bdf8;
-    }
-    .section p, .section ul {
-      font-size: 1rem;
-      color: #cbd5e1;
-      max-width: 700px;
-      margin: 1rem auto;
-      line-height: 1.6;
-    }
-    footer {
-      background: #0f172a;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #64748b;
-    }
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #000;
+      color: #ffffff;
+      background-image: url('hinomaru-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+}
+
+.cta-button {
+  background: #38bdf8;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 9999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #0ea5e9;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+}
+
   </style>
 </head>
 <body>
-  <div class="hero">
-    <img src="hinomaru-hero.png" alt="ひのまるくん" />
-    <div class="speech" id="speechText">
-      こんにちはー！ひのまる記憶サポートへようこそ！<br>
-      めんどくさい帳簿も、忘れたくないことも、ぜーんぶぼくにまかせて！<br>
-      あなたはLINEでポンって送るだけ。<br>
-      あとはぼくがぜんぶ覚えて、ぜんぶ記録して、ぜんぶお手伝いしちゃいます！
-    </div>
-    <audio id="voicePlayer" src="voice-final.mp3"></audio>
-    <button class="button" onclick="document.getElementById('voicePlayer').play()">しゃべるひのまるくん</button>
-  </div>  <div class="section">
-    <h2>詳しくはこちら</h2>
-    <ul>
-      <li>最高の簡単帳簿サービス！記録も保存もしたくないこともまるなげOK</li>
-      <li>LINEで送るだけ、その場でAIがログ化</li>
-      <li>非実名化、安心のセキュリティ完備</li>
-      <li>月800円で事務員を買うより安い！</li>
-    </ul>
+  <div class="overlay">
+    <h1>ひのまる記帳サポートへようこそ</h1>
+    <p>あなたの「めんどくさい」をすべてまかない、帳簿記録や書類作成をAIで自動化。<br>誰でもカンタン、プロ品質の記帳サービスをLINEで。</p>
+    <a href="#details" class="cta-button">詳しくはこちら</a>
   </div>  <footer>
-    &copy; 2025 ひのまる記録サポート | とにかく、めんどくさいをまるなげする最高パートナーです。
+    &copy; 2025 ひのまる記帳サポート ｜ <a href="#" style="color: #8ecae6;">利用規約</a> ／ <a href="#" style="color: #8ecae6;">特定商取引法</a>
   </footer>
 </body>
 </html>
