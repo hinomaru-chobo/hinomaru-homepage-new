@@ -1,71 +1,81 @@
-<!DOCTYPE html><html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ひのまる記帳サポート</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: "Hiragino Kaku Gothic Pro", "Yu Gothic", sans-serif;
-        background: linear-gradient(to bottom, #020617, #0f172a);
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        padding: 2rem;
-      }
-      .container {
-        max-width: 700px;
-        text-align: center;
-      }
-      img {
-        width: 150px;
-        margin-bottom: 1rem;
-      }
-      h1 {
-        font-size: 2rem;
-        color: #38bdf8;
-        margin-bottom: 0.5rem;
-      }
-      h2 {
-        font-size: 1.25rem;
-        margin: 1rem 0;
-        color: #e2e8f0;
-      }
-      p {
-        font-size: 1rem;
-        color: #cbd5e1;
-        line-height: 1.6;
-      }
-      .button {
-        margin-top: 1.5rem;
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-        background-color: #38bdf8;
-        color: #000;
-        border: none;
-        border-radius: 0.5rem;
-        cursor: pointer;
-      }
-      .footer {
-        margin-top: 2rem;
-        font-size: 0.875rem;
-        color: #64748b;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <img src="hinomaru-hero.png" alt="ひのまるくん" />
-      <h1>ひのまる記帳サポート</h1>
-      <h2>シンプルで決裁された記帳サポートを提供します</h2>
-      <p>
-        魔法のようなAIと、近未来のデザインで、誰でもカンタンに使えます。
-      </p>
-      <button class="button" onclick="location.href='https://lin.ee/xxx'">詳しくはこちら</button>
-      <div class="footer">&copy; 2025 ヒノマル帳簿 All rights reserved.</div>
+
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ひのまる記帳サポート</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #020617, #0f172a);
+      color: #fff;
+      font-family: "Yu Gothic", sans-serif;
+      overflow-x: hidden;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      position: relative;
+    }
+    .hero img {
+      width: 200px;
+      animation: floatIn 2s ease-out forwards;
+    }
+    @keyframes floatIn {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    .speech {
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      background: #1e293b;
+      border-radius: 1rem;
+      font-size: 1rem;
+      color: #e2e8f0;
+      max-width: 300px;
+      animation: fadeIn 2.5s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    .button {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background: #38bdf8;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      color: #000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <img src="hinomaru-hero.png" alt="ひのまるくん" />
+    <div class="speech" id="speechText">
+      こんにちは！ぼくはひのまるくん！<br>
+      帳簿の記録、税金の整理、AIでお手伝いするよ！
     </div>
-  </body>
+    <button class="button" onclick="readSpeech()">音声を再生</button>
+  </div>
+
+  <script>
+    function readSpeech() {
+      const msg = new SpeechSynthesisUtterance();
+      msg.text = document.getElementById("speechText").innerText;
+      msg.lang = 'ja-JP';
+      msg.pitch = 1.7;  // 少年っぽく
+      msg.rate = 1.0;
+      speechSynthesis.speak(msg);
+    }
+  </script>
+</body>
 </html>
