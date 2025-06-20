@@ -1,11 +1,9 @@
-
-```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ひのまる記帳サポート</title>
+  <title>ひのまる記憶サポート</title>
   <style>
     body {
       margin: 0;
@@ -61,21 +59,15 @@
   <div class="hero">
     <img src="hinomaru-hero.png" alt="ひのまるくん" />
     <div class="speech" id="speechText">
-      こんにちは！ぼくはひのまるくん！<br>
-      帳簿の記録、税金の整理、AIでお手伝いするよ！
+      こんにちは〜！ひのまる記憶サポートへようこそ！<br>
+      めんどくさい帳簿も、忘れたくないことも、ぜ〜んぶぼくにまかせて！<br>
+      あなたはLINEでポンって送るだけ。<br>
+      あとはぼくがぜんぶ覚えて、ぜんぶ記録して、ぜんぶお手伝いしちゃいます！
     </div>
-    <button class="button" onclick="readSpeech()">音声を再生</button>
-  </div>
 
-  <script>
-    function readSpeech() {
-      const msg = new SpeechSynthesisUtterance();
-      msg.text = document.getElementById("speechText").innerText;
-      msg.lang = 'ja-JP';
-      msg.pitch = 1.7;  // 少年っぽく
-      msg.rate = 1.0;
-      speechSynthesis.speak(msg);
-    }
-  </script>
+    <!-- ✅ 音声ファイル再生 -->
+    <audio id="voicePlayer" src="voice.mp3"></audio>
+    <button class="button" onclick="document.getElementById('voicePlayer').play()">しゃべるひのまるくん</button>
+  </div>
 </body>
 </html>
