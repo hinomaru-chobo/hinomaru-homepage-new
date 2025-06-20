@@ -2,14 +2,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ひのまる記帳サポート</title>
+  <title>ひのまる記録サポート</title>
   <style>
     body {
       margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
-      color: #fff;
-      background: url('hinomaru-hero.jpg') no-repeat center center fixed;
+      color: #ffffff;
+      background: #000000;
+      background-image: url('hinomaru-hero.jpg');
       background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
     .overlay {
       background-color: rgba(0, 0, 0, 0.6);
@@ -22,11 +25,11 @@
       padding: 2rem;
     }
     h1 {
-      font-size: 2.6rem;
+      font-size: 2.8rem;
       margin-bottom: 1rem;
     }
     p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       max-width: 800px;
       margin: 0 auto 2rem;
       line-height: 1.8;
@@ -47,29 +50,43 @@
       background: #0ea5e9;
     }
     footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
       text-align: center;
+      padding: 1rem;
       font-size: 0.9rem;
       color: #cbd5e1;
-      padding: 2rem 1rem;
     }
     footer a {
       color: #8ecae6;
-      margin: 0 0.5rem;
       text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="overlay">
-    <h1>ひのまる記帳サポートへようこそ</h1>
+    <h1>ひのまる記録サポートへようこそ</h1>
     <p>
-      あなたの「めんどくさい」をすべてまかせてください。帳簿記録や請求書作成などの事務作業をAIでかんたんに自動化。<br>
+      あなたの「めんどくさい」をすべてお任せください。<br>
+      帳簿記録や請求書作成などの事務作業をAIでかんたん自動化。<br>
       初めての方も安心・簡単・高品質。LINEで気軽にスタートできます。
     </p>
-    <a href="https://page.line.me/215tmuth" class="cta-button">詳しくはこちら</a>
+    <a href="https://page.line.me/215tmuth" class="cta-button">LINEで無料ではじめる</a>
   </div>
   <footer>
-    &copy; 2025 ひのまる記帳サポート ｜ <a href="#">利用規約</a> ／ <a href="#">特定商取引法</a><br>
+    &copy; 2025 ひのまる記録サポート ｜
+    <a href="#">利用規約</a> ／
+    <a href="#">特定商取引法</a><br>
     事業者：眞壁 照久 ｜ 東京都大田区東雪谷 ｜ メール：teruhisamakabe9999@gmail.com<br>
     適格請求書発行事業者番号：T3810950856371
   </footer>
