@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!DOCTYPE html><html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,7 +18,7 @@
       justify-content: center;
       min-height: 100vh;
       text-align: center;
-      position: relative;
+      padding: 2rem;
     }
     .hero img {
       width: 200px;
@@ -36,7 +35,7 @@
       border-radius: 1rem;
       font-size: 1rem;
       color: #e2e8f0;
-      max-width: 300px;
+      max-width: 90%;
       animation: fadeIn 2.5s ease-out forwards;
     }
     @keyframes fadeIn {
@@ -53,21 +52,52 @@
       color: #000;
       cursor: pointer;
     }
+    .section {
+      padding: 3rem 1.5rem;
+      background: #0f172a;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 1.5rem;
+      color: #38bdf8;
+    }
+    .section p, .section ul {
+      font-size: 1rem;
+      color: #cbd5e1;
+      max-width: 700px;
+      margin: 1rem auto;
+      line-height: 1.6;
+    }
+    footer {
+      background: #0f172a;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
   </style>
 </head>
 <body>
   <div class="hero">
     <img src="hinomaru-hero.png" alt="ひのまるくん" />
     <div class="speech" id="speechText">
-      こんにちは〜！ひのまる記憶サポートへようこそ！<br>
-      めんどくさい帳簿も、忘れたくないことも、ぜ〜んぶぼくにまかせて！<br>
+      こんにちはー！ひのまる記憶サポートへようこそ！<br>
+      めんどくさい帳簿も、忘れたくないことも、ぜーんぶぼくにまかせて！<br>
       あなたはLINEでポンって送るだけ。<br>
       あとはぼくがぜんぶ覚えて、ぜんぶ記録して、ぜんぶお手伝いしちゃいます！
     </div>
-
-    <!-- ✅ 音声ファイル再生 -->
-    <audio id="voicePlayer" src="voice.mp3"></audio>
+    <audio id="voicePlayer" src="voice-final.mp3"></audio>
     <button class="button" onclick="document.getElementById('voicePlayer').play()">しゃべるひのまるくん</button>
-  </div>
+  </div>  <div class="section">
+    <h2>詳しくはこちら</h2>
+    <ul>
+      <li>最高の簡単帳簿サービス！記録も保存もしたくないこともまるなげOK</li>
+      <li>LINEで送るだけ、その場でAIがログ化</li>
+      <li>非実名化、安心のセキュリティ完備</li>
+      <li>月800円で事務員を買うより安い！</li>
+    </ul>
+  </div>  <footer>
+    &copy; 2025 ひのまる記録サポート | とにかく、めんどくさいをまるなげする最高パートナーです。
+  </footer>
 </body>
 </html>
