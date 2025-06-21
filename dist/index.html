@@ -1,94 +1,34 @@
-<!DOCTYPE html><html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ひのまる記録サポート</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      color: #ffffff;
-      background: #000000;
-      background-image: url('hinomaru-hero.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.3rem;
-      max-width: 800px;
-      margin: 0 auto 2rem;
-      line-height: 1.8;
-    }
-    .cta-button {
-      background: #38bdf8;
-      color: #fff;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-      font-weight: bold;
-      border-radius: 9999px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .cta-button:hover {
-      background: #0ea5e9;
-    }
-    footer {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #cbd5e1;
-    }
-    footer a {
-      color: #8ecae6;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-      p {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="overlay">
-    <h1>ひのまる記録サポートへようこそ</h1>
-    <p>
+<!-- 修正済みのヒーローセクションHTML例 --><section class="hero">
+  <div class="hero-content">
+    <h1 class="text-4xl font-bold mb-4">ひのまる記録サポート<br><span class="text-2xl">へようこそ</span></h1>
+    <p class="text-lg leading-relaxed mb-6">
       あなたの「めんどくさい」をすべてお任せください。<br>
       帳簿記録や請求書作成などの事務作業をAIでかんたん自動化。<br>
       初めての方も安心・簡単・高品質。LINEで気軽にスタートできます。
     </p>
-    <a href="https://page.line.me/215tmuth" class="cta-button">LINEで無料ではじめる</a>
+    <a href="https://lin.ee/xxxx" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-md transition">LINEで無料ではじめる</a>
   </div>
-  <footer>
-    &copy; 2025 ひのまる記録サポート ｜
-    <a href="#">利用規約</a> ／
-    <a href="#">特定商取引法</a><br>
+</section><!-- CSS微調整（例：Tailwind） --><style>
+.hero {
+  background: url('/img/hinomaru-hero.jpg') no-repeat center center;
+  background-size: cover;
+  padding-top: 280px;
+  padding-bottom: 120px;
+  text-align: center;
+  color: white;
+}
+.hero-content {
+  max-width: 90%;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.0); /* 背景なし */
+  padding-bottom: 40px;
+}
+</style><!-- フッターなど追加コンテンツ --><footer class="text-center text-sm mt-10 text-white">
+  <p>
+    © 2025 ひのまる記録サポート ｜ <a href="/terms.html">利用規約</a> ｜ <a href="/law.html">特定商取引法</a>
+  </p>
+  <p>
     事業者：眞壁 照久 ｜ 東京都大田区東雪谷 ｜ メール：teruhisamakabe9999@gmail.com<br>
     適格請求書発行事業者番号：T3810950856371
-  </footer>
-</body>
-</html>
+  </p>
+</footer>
