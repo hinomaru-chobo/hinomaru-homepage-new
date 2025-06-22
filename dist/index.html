@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!DOCTYPE html><html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,69 +6,76 @@
   <style>
     body {
       margin: 0;
-      font-family: "Helvetica Neue", sans-serif;
-      background: url("hinomaru-hero-red.jpg") no-repeat center center fixed;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #000428;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero {
+      width: 100%;
+      background: url('hinomaru-hero-red.jpg') no-repeat center top;
       background-size: cover;
-      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      padding-top: 60px;
-      backdrop-filter: brightness(0.9);
+      padding: 5vh 2rem 60vh; /* 下余白大きめで顔隠れない */
+      position: relative;
     }
-    h1 {
+    .hero h1 {
       font-size: 2rem;
-      margin-bottom: 1rem;
       font-weight: bold;
+      margin-top: 2rem;
     }
-    p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      max-width: 90%;
-      margin: auto;
+    .hero p {
+      font-size: 1rem;
+      margin: 1rem 0;
+      line-height: 1.5;
     }
     .cta-button {
-      display: inline-block;
-      background-color: #00b0ff;
+      background-color: #00aaff;
       color: white;
-      font-size: 1.2rem;
-      padding: 0.8rem 2rem;
-      margin-top: 2rem;
       border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      border-radius: 999px;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      margin-top: 2rem;
+      z-index: 2;
+      position: relative;
     }
     footer {
-      margin-top: 4rem;
+      background-color: #000020;
+      color: white;
+      padding: 2rem;
       font-size: 0.8rem;
-      line-height: 1.6;
-      background-color: rgba(0,0,0,0.4);
-      padding: 20px;
+      text-align: center;
+      line-height: 1.8;
     }
     footer a {
-      color: #aaf;
-      margin: 0 0.5rem;
+      color: #99ccff;
       text-decoration: none;
+      margin: 0 0.5rem;
     }
   </style>
 </head>
 <body>
-  <h1>ひのまる記録サポートへようこそ</h1>
-  <p>あなたの「めんどくさい」をすべてお任せください。<br>
-  帳簿記録や請求書作成などの事務作業をAIでかんたん自動化。<br>
-  初めての方も安心・簡単・高品質。<br>
-  LINEで気軽にスタートできます。</p>
-
-  <a href="https://lin.ee/XXXXXX" class="cta-button">LINEで無料ではじめる</a>
-
-  <footer>
-    © 2025 ひのまる記録サポート ｜ 
-    <a href="terms.html">利用規約</a> ／ 
-    <a href="privacy.html">プライバシーポリシー</a> ／ 
-    <a href="law.html">特定商取引法</a><br>
-    事業者：眞壁 照久｜東京都大田区東雪谷｜<br>
-    メール：teruhisamakabe9999@gmail.com<br>
-    電話番号：090-5506-8947｜適格請求書発行事業者番号：T3810950856371
+  <section class="hero">
+    <h1>ひのまる記録サポートへようこそ</h1>
+    <p>あなたの「めんどくさい」をすべてお任せください。</p>
+    <p>帳簿記録や請求書作成などの事務作業をAIでかんたん自動化。<br>
+       初めての方も安心・簡単・高品質。<br>
+       LINEで気軽にスタートできます。</p>
+    <button class="cta-button" onclick="window.location.href='https://lin.ee/xxxxxx'">LINEで無料ではじめる</button>
+  </section>  <footer>
+    © 2025 ひのまる記録サポート ｜
+    <a href="#">利用規約</a> ／
+    <a href="#">プライバシーポリシー</a> ／
+    <a href="#">特定商取引法</a><br>
+    事業者：眞壁 照久 ｜ 東京都大田区東雪谷 ｜<br>
+    メール：teruhisamakabe9999@gmail.com ｜<br>
+    電話番号：090-5506-8947 ｜ 適格請求書発行事業者番号：T3810950856371
   </footer>
 </body>
 </html>
