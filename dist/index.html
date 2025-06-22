@@ -1,116 +1,74 @@
-
-<!DOCTYPE html>
-<html lang="ja">
+<!DOCTYPE html><html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ひのまる記録サポート</title>
   <style>
     body {
       margin: 0;
-      font-family: "Arial", sans-serif;
+      font-family: sans-serif;
+      background-color: #000;
       color: white;
-      background: url('hinomaru-hero-red.jpg') no-repeat center center;
-      background-size: cover;
-      background-attachment: scroll;
     }
-
     .hero {
+      background-image: url('hinomaru-hero-red.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 50px 20px 0 20px;
       text-align: center;
-      padding-top: 30px;
-      padding-bottom: 160px;
     }
-
-    .hero h1 {
-      font-size: 28px;
-      font-weight: bold;
-      margin: 0 20px 10px;
+    .hero-text {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
-
-    .hero p {
-      font-size: 18px;
-      margin: 5px 20px;
-    }
-
-    .start-button {
+    .line-button {
       display: inline-block;
-      margin-top: 100px;
       padding: 15px 30px;
       font-size: 18px;
-      background-color: #00bfff;
+      font-weight: bold;
+      background-color: #00c300;
       color: white;
-      border: none;
       border-radius: 30px;
       text-decoration: none;
-      font-weight: bold;
+      margin-top: 240px; /* ボタンだけ下にずらす */
     }
-
     .section {
-      padding: 20px 20px 40px;
-      text-align: left;
       background-color: transparent;
-    }
-
-    .section h2 {
-      font-size: 22px;
-      margin-top: 0;
-    }
-
-    footer {
-      font-size: 12px;
+      padding: 40px 20px;
       text-align: center;
-      padding: 20px 10px;
-      background-color: rgba(0, 0, 0, 0.5);
     }
-
-    a {
+    .footer {
+      background-color: #000;
       color: white;
+      text-align: center;
+      font-size: 14px;
+      padding: 30px 10px;
     }
-
-    @media screen and (max-width: 600px) {
-      .hero h1 {
-        font-size: 24px;
-      }
-      .hero p,
-      .section p {
-        font-size: 16px;
-      }
-      .start-button {
-        margin-top: 80px;
-      }
+    .footer a {
+      color: #ddd;
+      text-decoration: underline;
+      margin: 0 10px;
     }
   </style>
 </head>
 <body>
   <div class="hero">
-    <h1>ひのまる記録サポートへようこそ</h1>
-    <p>あなたの「めんどくさい」をすべてお任せください。</p>
-    <p>帳簿記録や請求書作成などの事務作業をAIでかんたん自動化。</p>
-    <p>初めての方も安心・簡単・高品質。LINEで気軽にスタートできます。</p>
-    <a href="https://page.line.me/215tmuth" class="start-button">LINEで無料ではじめる</a>
-  </div>
-
-  <div class="section">
+    <div class="hero-text">
+      <p>あなたの「めんどくさい」をすべてお任せください。<br>
+      帳簿記録や請求書作成などの事務作業をAIでかんたん自動化。<br>
+      初めての方も安心・簡単・高品質。LINEで気軽にスタートできます。</p>
+    </div>
+    <a class="line-button" href="https://page.line.me/215tmuth">LINEで無料ではじめる</a>
+  </div>  <div class="section">
     <h2>このサービスについて</h2>
-    <p>
-      「ひのまる記録サポート」は、面倒な帳簿づけ・請求書発行などをAIが自動で処理する、新しいカタチの事務サポートです。
-      スマホ1つで使えて、専門知識も不要。LINEで誰でも今すぐ使えます。
-      現在、テストユーザーを限定募集中です。
-    </p>
+    <p>「ひのまる記録サポート」は、面倒な帳簿づけ・請求書発行などをAIが自動で処理する、新しいカタチの事務サポートです。スマホ1つで使えて、専門知識も不要。LINEで誰でも今すぐ使えます。現在、テストユーザーを限定募集中です。</p>
+  </div>  <div class="footer">
+    <p>© 2025 ひのまる記録サポート ｜ <a href="#">利用規約</a> ｜ <a href="#">プライバシーポリシー</a> ｜ <a href="#">特定商取引法</a></p>
+    <p>事業者：眞壁 照久 ｜ 東京都大田区東雪谷 ｜<br>
+    メール：teruhisamakabe9999@gmail.com ｜ 電話番号：090-5506-8947<br>
+    適格請求書発行事業者番号：T3810950856371</p>
   </div>
-
-  <footer>
-    <p>
-      © 2025 ひのまる記録サポート　
-      ｜ <a href="#">利用規約</a>
-      ｜ <a href="#">プライバシーポリシー</a>
-      ｜ <a href="#">特定商取引法</a>
-    </p>
-    <p>
-      事業者：眞壁 照久 ｜ 東京都大田区東雪谷 ｜<br />
-      メール：teruhisamakabe9999@gmail.com ｜ 電話番号：090-5506-8947<br />
-      適格請求書発行事業者番号：T3810950856371
-    </p>
-  </footer>
 </body>
 </html>
