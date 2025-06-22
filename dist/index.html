@@ -5,120 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ひのまる記録サポート</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      font-family: "Arial", sans-serif;
-      background: url("hinomaru-hero-red.jpg") no-repeat center top;
+      padding: 0;
+      font-family: sans-serif;
+      height: 100%;
+      background: url('hinomaru-hero-red.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-attachment: scroll;
       color: white;
-      text-align: center;
+      text-shadow: 0 0 5px black;
+    }
+
+    .content {
+      padding: 2em 1em;
+      background-color: rgba(255, 255, 255, 0); /* 完全透明 */
     }
 
     .hero {
-      padding: 6vh 2em 0;
+      text-align: center;
+      padding-top: 6em;
     }
 
     .hero h1 {
-      font-size: 6vw;
-      font-weight: bold;
-      text-shadow: 2px 2px 4px #000;
-      margin: 0.5em 0 0.2em;
+      font-size: 2em;
+      margin: 0.5em 0;
     }
 
     .hero p {
-      font-size: 4vw;
-      line-height: 1.6;
-      text-shadow: 1px 1px 3px #000;
-      margin: 0.3em 0;
+      font-size: 1em;
+      margin: 0.5em 0;
     }
 
-    .cta-button {
-      display: inline-block;
+    .start-button {
+      margin-top: 6em; /* ←ここでボタンを下に */
+      padding: 1em 2em;
       background-color: #00bfff;
       color: white;
-      font-size: 4.5vw;
-      font-weight: bold;
-      padding: 0.8em 2em;
-      margin: 5vh 0 4vh;
-      border-radius: 50px;
+      border: none;
+      border-radius: 999px;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer {
+      font-size: 0.8em;
+      text-align: center;
+      padding: 2em 1em;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    a {
+      color: #87cefa;
       text-decoration: none;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-    }
-
-    .section {
-      background-color: rgba(0, 0, 50, 0.8);
-      padding: 2em 1em;
-    }
-
-    .section h2 {
-      font-size: 5vw;
-      margin-bottom: 1em;
-      text-shadow: 1px 1px 2px #000;
-    }
-
-    .section p {
-      font-size: 4vw;
-      line-height: 1.8;
-      text-align: left;
-      max-width: 800px;
-      margin: 0 auto 1em;
-    }
-
-    footer {
-      font-size: 3vw;
-      background: #000033;
-      color: #ccc;
-      padding: 2em 1em;
-      line-height: 1.6;
-    }
-
-    footer a {
-      color: #ccc;
-      text-decoration: underline;
       margin: 0 0.5em;
-    }
-
-    @media (min-width: 768px) {
-      .hero h1 {
-        font-size: 2.5em;
-      }
-      .hero p,
-      .cta-button,
-      .section h2,
-      .section p,
-      footer {
-        font-size: 1.2em;
-      }
     }
   </style>
 </head>
 <body>
-  <div class="hero">
+  <div class="hero content">
     <h1>ひのまる記録サポートへようこそ</h1>
-    <p>
-      あなたの「めんどくさい」をすべてお任せください。<br>
-      帳簿記録や請求書作成などの事務作業をAIでかんたん自動化。<br>
-      初めての方も安心・簡単・高品質。LINEで気軽にスタートできます。
-    </p>
-    <a class="cta-button" href="https://page.line.me/215tmuth" target="_blank">LINEで無料ではじめる</a>
+    <p>あなたの「めんどくさい」をすべてお任せください。</p>
+    <p>帳簿記録や請求書作成などの事務作業をAIでかんたん自動化。</p>
+    <p>初めての方も安心・簡単・高品質。LINEで気軽にスタートできます。</p>
+    <button class="start-button" onclick="location.href='https://page.line.me/215tmuth'">
+      LINEで無料ではじめる
+    </button>
   </div>
 
-  <div class="section">
+  <div class="content">
     <h2>このサービスについて</h2>
-    <p>
-      「ひのまる記録サポート」は、面倒な帳簿づけ・請求書発行などをAIが自動で処理する、新しいカタチの事務サポートです。<br>
-      スマホ1つで使えて、専門知識も不要。LINEで誰でも今すぐ使えます。<br>
-      現在、テストユーザーを限定募集しています。
-    </p>
+    <p>「ひのまる記録サポート」は、面倒な帳簿づけ・請求書発行などをAIが自動で処理する、新しいカタチの事務サポートです。</p>
+    <p>スマホ1つで使えて、専門知識も不要。LINEで誰でも今すぐ使えます。</p>
+    <p>現在、テストユーザーを限定募集しています。</p>
   </div>
 
-  <footer>
-    © 2025 ひのまる記録サポート　
-    <a href="#">利用規約</a>｜<a href="#">プライバシーポリシー</a>｜<a href="#">特定商取引法</a><br><br>
-    事業者：眞壁 照久｜東京都大田区東雪谷<br>
-    メール：teruhisamakabe9999@gmail.com｜電話番号：090-5506-8947<br>
-    適格請求書発行事業者番号：T3810950856371
-  </footer>
+  <div class="footer">
+    <p>
+      © 2025 ひのまる記録サポート ｜ 
+      <a href="#">利用規約</a> ｜ 
+      <a href="#">プライバシーポリシー</a> ｜ 
+      <a href="#">特定商取引法</a>
+    </p>
+    <p>
+      事業者：眞壁 照久 ｜ 東京都大田区東雪谷 ｜<br>
+      メール：teruhisamakabe9999@gmail.com ｜ 電話番号：090-5506-8947 ｜<br>
+      適格請求書発行事業者番号：T3810950856371
+    </p>
+  </div>
 </body>
 </html>
