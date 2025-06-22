@@ -1,72 +1,72 @@
 <!DOCTYPE html><html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ひのまる帳簿サポート</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Arial', sans-serif;
-      background: url('hinomaru-hero-red.jpg') no-repeat center center fixed;
-      background-size: cover;
-      position: relative;
-      height: 100vh;
-      color: white;
-    }.overlay {
-  background: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+      box-sizing: border-box;
+    }body, html {
   height: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.hero {
+  background-image: url("dist/hinomaru-hero-red.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 1rem;
+  align-items: flex-end;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.overlay {
+  width: 100%;
   background: rgba(0, 0, 0, 0.6);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: 30px 20px 50px;
+  text-align: center;
 }
 
-p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+.title {
+  font-size: 2em;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-.button {
+.subtitle {
+  font-size: 1em;
+  color: #f0f0f0;
+  margin-bottom: 30px;
+  line-height: 1.6em;
+}
+
+.start-btn {
+  display: inline-block;
   background-color: #ff5f5f;
   color: white;
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
-  border: none;
+  font-size: 1.2em;
+  padding: 15px 40px;
   border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s;
-}
-
-.button:hover {
-  background-color: #e84141;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <h1>ひのまる帳簿サポート</h1>
-    <p>LINEでかんたん記帳・経費管理。スマホ1つで全部完了。</p>
-    <a href="https://line.me/R/ti/p/%40xxxxxxx"><button class="button">LINEで始める</button></a>
+  <div class="hero">
+    <div class="overlay">
+      <div class="title">ひのまる帳簿サポート</div>
+      <div class="subtitle">LINEでかんたん記帳・経費管理。スマホ1つで全部完了。</div>
+      <a class="start-btn" href="#">LINEで始める</a>
+    </div>
   </div>
 </body>
 </html>
